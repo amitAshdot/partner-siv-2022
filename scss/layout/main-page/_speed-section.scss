@@ -1,0 +1,151 @@
+.speed {
+    &-section {
+        position: relative;
+        padding-inline-start: 8rem;
+        padding-inline-end: 8rem;
+        // padding-block-end: 6.4rem;
+        overflow: unset;
+        background: $color-grey;
+        margin-block-start: -6rem;
+
+        & * {
+            overflow: unset;
+        }
+
+        @include respond(mini-desktop) {
+            padding-block-start: 3rem;
+            padding-inline: 2.5rem;
+        }
+    }
+
+    &-floats {
+        position: absolute;
+        width: 100%;
+
+        & .speed-blueLineRight {
+            position: absolute;
+            right: -8rem;
+            top: 0;
+            width: 12.5rem;
+            height: auto;
+
+            @include respond(mini-desktop) {
+                right: -8rem;
+                top: 124rem;
+                width: 13.5rem;
+            }
+        }
+
+        & .speed-blueLineLeft {
+            width: auto;
+            position: absolute;
+            left: 8rem;
+            top: 43rem;
+            height: 47rem;
+
+            @include respond(mini-desktop) {
+                height: 38rem;
+                left: 2rem;
+                top: 195rem;
+            }
+        }
+    }
+
+    &-head {
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 0 auto;
+        font-family: 'simpler-bold', sans-serif;
+
+        @include respond(mini-desktop) {
+            font-size: 4.5rem;
+            line-height: 4.5rem;
+            margin-block-end: 5rem;
+            font-family: 'simpler-bolder', sans-serif;
+        }
+    }
+
+    &-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 49rem;
+        justify-content: center;
+        margin: auto;
+        padding-block-start: 3rem;
+
+        @include respond(mini-desktop) {
+            flex-direction: column;
+            width: 100%;
+            gap: 8rem;
+        }
+    }
+
+    &-details {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 47%;
+        color: #ffffff;
+        background: #000000;
+        border-radius: 10px;
+        padding-block-start: 3rem;
+        padding-block-end: 2rem;
+        padding-inline-start: 2rem;
+        padding-inline-end: 2rem;
+        text-align: center;
+        box-sizing: border-box;
+        margin: 2rem 0.5rem;
+
+        @include respond(mini-desktop) {
+            flex-direction: column;
+            width: 100%;
+            padding-block-start: 5rem;
+            padding-block-end: 4rem;
+        }
+
+    }
+
+    &-img {
+        position: absolute;
+        top: 0%;
+        transform: translate(50%, -50%);
+        width: 4.5rem;
+        height: 4.5rem;
+
+        @include respond(mini-desktop) {
+            width: 8.5rem;
+            height: 8.5rem;
+        }
+    }
+
+    &-title {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        font-family: 'simpler', sans-serif;
+
+        @include respond(mini-desktop) {
+            text-align: center;
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+    }
+
+    &-text {
+        line-height: 1.25rem;
+        font-size: 1.1rem;
+        font-family: 'simpler', sans-serif;
+        margin-top: 0.65rem;
+
+        @include respond(mini-desktop) {
+            line-height: 2.3rem;
+            font-size: 2.3rem;
+            text-align: center;
+            margin-block-start: 1.5rem;
+            padding-inline: 0rem;
+        }
+    }
+
+}

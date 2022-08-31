@@ -1,0 +1,461 @@
+.packs {
+    text-align: center;
+
+    &>h3 {
+        font-size: 1.2em;
+        line-height: 2rem;
+        font-family: 'simpler-bold', sans-serif;
+        padding-block-end: 0.5rem;
+
+        @include respond(mini-desktop) {
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+
+    }
+
+    &>h4 {
+        font-size: 2em;
+        line-height: 2rem;
+        font-family: 'simpler-bolder', sans-serif;
+        padding-block-end: 1rem;
+
+        @include respond(mini-desktop) {
+            font-size: 3em;
+            line-height: 4.5rem;
+        }
+    }
+
+    &-section {
+        background-color: $color-primary;
+        width: 100%;
+        display: block;
+        padding: 10% 0 5% 0;
+        box-sizing: border-box;
+
+        @include respond(mini-desktop) {
+            padding-block-start: 13rem;
+        }
+    }
+
+    &-container {
+
+        .slickArea {
+            // width: 58rem;
+            margin: auto;
+
+            @include respond(mini-desktop) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+.showMorePacks {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-block-end: 2rem;
+
+    @include respond(mini-desktop) {
+        width: 75%;
+        margin: auto;
+        text-align: right;
+        margin-block-end: 2rem;
+    }
+
+    &>label {
+        font-size: 1.6rem;
+        line-height: 120%;
+
+        @include respond(mini-desktop) {
+            font-size: 2.6rem;
+            line-height: 120%;
+        }
+    }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 2.5rem;
+    height: 1.2rem;
+
+    @include respond(mini-desktop) {
+        width: 15rem;
+        height: 4rem;
+    }
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-primary;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 0.81rem;
+    width: 0.81rem;
+    left: 0.2rem;
+    bottom: 0.15rem;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+    @include respond(mini-desktop) {
+        height: 3rem;
+        width: 3rem;
+        left: 0.5rem;
+        bottom: 0.4rem;
+    }
+}
+
+input:checked+.slider {
+    background-color: $color-primary;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px $color-primary;
+}
+
+input:focus+.slider:before,
+input:hover+.slider:before {
+    background: $color-secondary;
+
+}
+
+input:checked+.slider:before {
+    transform: translateX(1.15rem);
+    background: $color-secondary;
+
+    @include respond(mini-desktop) {
+        transform: translateX(3.5rem);
+    }
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 10rem;
+    border: 1px solid;
+
+    @include respond(mini-desktop) {
+        border-radius: 2rem;
+    }
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+
+.slick-slide {
+    margin-inline: 0.5rem;
+    border-radius: 1.2rem;
+    background: #ffffff;
+    //    padding:2rem 2rem 1rem;
+
+    .myPackOne,
+    .myPackTwo {
+        padding: 2rem 2rem 1rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include respond(mini-desktop) {
+            padding: 4.3rem 4rem 3rem;
+        }
+
+        h3.speedtxt {
+            font-size: 1.7rem;
+            line-height: 100%;
+            font-family: simpler-bold;
+
+            @include respond(mini-desktop) {
+                font-size: 3.4rem;
+            }
+        }
+
+        .mb {
+            font-size: 3rem;
+            font-family: 'simpler-bolder', sans-serif;
+            line-height: 100%;
+            margin-block-start: 1rem;
+
+            @include respond(mini-desktop) {
+                font-size: 5.5rem;
+            }
+
+            span {
+                font-size: 2rem;
+                font-family: 'simpler-bold', sans-serif;
+
+                @include respond(mini-desktop) {
+                    font-size: 3.5rem;
+                }
+            }
+        }
+
+        .price {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.4rem;
+            line-height: 100%;
+            font-family: simpler-bold;
+            border-top: 1px solid #000000;
+            width: 100%;
+            margin-block-start: 2rem;
+            padding-block-start: 1rem;
+
+            @include respond(mini-desktop) {
+                font-size: 3rem;
+                gap: 1rem;
+                padding-block-start: 2rem;
+            }
+
+            & span {
+                color: $color-primary;
+                font-size: 1rem;
+
+                @include respond(mini-desktop) {
+                    font-size: 2rem;
+                    color: $color-primary-dark;
+                }
+            }
+        }
+
+        .btn {
+            display: flex;
+            width: 70%;
+            justify-content: center;
+            position: relative;
+            float: left;
+            color: #000000;
+            text-align: center;
+            padding: 1% 1% 1% 1%;
+            text-decoration: none;
+            box-sizing: border-box;
+            background-color: $color-secondary;
+            font-family: 'simpler-bolder', sans-serif;
+            border: 4px solid;
+            margin-inline: 15%;
+            margin-block: 1.5rem;
+
+            cursor: pointer;
+
+            @include respond(mini-desktop) {
+                border: 3px solid;
+                width: 80%;
+                padding: 1rem;
+                display: flex;
+                margin: 2rem 3.5rem;
+                margin-block-start: 3rem;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 100%;
+                left: 0%;
+                top: 0;
+                z-index: -1;
+                background: white;
+                z-index: 1;
+                transition: all 0.3s;
+                cursor: pointer;
+            }
+
+            &:hover,
+            &:focus {
+                &::after {
+                    width: 100%;
+                }
+            }
+
+            & .text {
+                position: relative;
+                text-align: center;
+                font-size: 1.2rem;
+                background-color: transparent;
+                font-family: 'simpler-bolder', sans-serif;
+                cursor: pointer;
+                border: none;
+                display: flex;
+                justify-content: center;
+                padding: 0;
+                margin: 0;
+                z-index: 2;
+
+                @include respond(mini-desktop) {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    .myPackTwo {
+        padding: 1rem;
+
+        h3.speedtxt {
+            font-size: 1.4rem;
+            line-height: 100%;
+            font-family: simpler-bold;
+
+            @include respond(mini-desktop) {
+                font-size: 2.5rem;
+                line-height: 100%;
+                font-family: simpler-bolder;
+                margin-block-start: 2rem;
+            }
+        }
+
+        .mb {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            font-size: 2.5rem;
+            line-height: 100%;
+
+            @include respond(mini-desktop) {
+                font-size: 5.5rem;
+                font-family: simpler;
+            }
+
+            span {
+                font-size: 1.6rem;
+                font-family: 'simpler', sans-serif;
+
+                @include respond(mini-desktop) {
+                    margin-inline-end: 0.8rem;
+                    font-size: 2.6rem;
+                    font-family: 'simpler-bolder', sans-serif;
+                }
+            }
+        }
+
+        .plus {
+            &>img {
+                width: 9.5rem;
+                margin-block-end: 0.5rem;
+                height: auto;
+
+                @include respond(mini-desktop) {
+                    width: 17.5rem;
+                }
+            }
+        }
+
+        &>p {
+            line-height: 100%;
+            font-size: 1.5rem;
+            font-family: simpler-bold;
+            text-align: center;
+            text-align: -webkit-center;
+
+            @include respond(mini-desktop) {
+                font-size: 3rem;
+                font-family: simpler;
+            }
+        }
+
+        .price {
+            font-size: 1.4rem;
+            line-height: 100%;
+
+            border-top: none;
+            margin-block-start: 0rem;
+            padding-block-start: 0rem;
+
+
+            @include respond(mini-desktop) {
+                font-size: 3rem;
+            }
+
+            & span {
+                color: $color-primary;
+                font-size: 1rem;
+            }
+        }
+
+        .btn {
+            display: flex;
+            width: 60%;
+            justify-content: center;
+            position: relative;
+            float: left;
+            color: #000000;
+            text-align: center;
+            padding: 1% 1% 1% 1%;
+            text-decoration: none;
+            box-sizing: border-box;
+            background-color: $color-secondary;
+            font-family: 'simpler-bolder', sans-serif;
+            border: 4px solid;
+            margin-inline: 20%;
+            margin-block: 0.5rem;
+
+            cursor: pointer;
+
+            @include respond(mini-desktop) {
+                margin: 1.8rem;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 100%;
+                left: 0%;
+                top: 0;
+                z-index: -1;
+                background: white;
+                z-index: 1;
+                transition: all 0.3s;
+                cursor: pointer;
+            }
+
+            &:hover,
+            &:focus {
+                &::after {
+                    width: 100%;
+                }
+            }
+
+            & .text {
+                position: relative;
+                text-align: center;
+                font-size: 1.2rem;
+                background-color: transparent;
+                font-family: 'simpler-bolder', sans-serif;
+                cursor: pointer;
+                border: none;
+                display: flex;
+                justify-content: center;
+                padding: 0;
+                margin: 0;
+                z-index: 2;
+            }
+        }
+    }
+}

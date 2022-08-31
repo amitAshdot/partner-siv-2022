@@ -1,0 +1,307 @@
+.top {
+    &-section {
+        position: relative;
+        // align-items: center;
+        // height: 32rem;
+        height: 45.5rem;
+        background: $color-black;
+
+        @include respond(mini-desktop) {
+            font-size: 3.8rem;
+            overflow: visible;
+            height: 44rem;
+
+        }
+
+        & .tnaim {
+            position: absolute;
+            bottom: 7rem;
+            left: 1.5rem;
+            width: auto;
+            font-size: 1rem;
+            font-family: 'simpler-bolder', sans-serif;
+
+            @include respond(mini-desktop) {
+                bottom: 5rem;
+                left: 3rem;
+                font-size: 1.15rem;
+            }
+        }
+    }
+
+    &-bgMainWeb {
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: -1;
+    }
+
+    &-bgMainMob {
+        width: 100%;
+        height: auto;
+    }
+
+    &-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 12.7rem;
+        height: auto;
+
+        @include respond(mini-desktop) {
+            width: 15.65rem;
+        }
+    }
+
+    &-bgMainMob {}
+
+    &-blueLineRight {
+        right: 0rem;
+        top: 1rem;
+        position: absolute;
+        height: 40rem;
+        width: auto;
+    }
+
+    &-blueLineLeft {
+        left: 0rem;
+        top: 1rem;
+        position: absolute;
+        height: 40rem;
+        width: auto;
+
+
+        @include respond(mini-desktop) {
+            top: 0rem;
+            height: 42rem;
+        }
+    }
+
+    &-staticWeb {
+        // display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 26.5%;
+        height: auto;
+    }
+
+    &-siv_formMob {
+        //mobile only
+        position: absolute;
+        bottom: -7rem;
+        z-index: 3;
+
+        @include respond(mini-desktop) {
+            width: 98%;
+        }
+
+    }
+
+    &-staticMob {
+        position: absolute;
+        width: 18rem;
+        height: auto;
+        bottom: 0;
+        z-index: 1;
+    }
+
+
+}
+
+.head__text {
+    &-container {
+        @include absltCenter;
+        top: 13.5rem;
+        width: 46rem;
+        margin: 0 auto;
+        color: #fff;
+        text-align: center;
+        font-family: 'simpler-bolder', sans-serif;
+
+        @include respond(mini-desktop) {
+            left: 3rem;
+            transform: translate(0%, -50%);
+            top: 20rem;
+            width: 29rem;
+        }
+
+        .tellme {
+            display: block;
+            line-height: 100%;
+            font-size: 2.5rem;
+
+        }
+
+        .private {
+            display: block;
+            font-size: 3.9rem;
+            line-height: 100%;
+            font-family: 'simpler-bold', sans-serif;
+            font-weight: 100;
+
+            @include respond(mini-desktop) {
+                font-size: 3rem;
+            }
+        }
+
+        .siv {
+            display: block;
+            font-size: 2.2rem;
+            line-height: 100%;
+            color: #fff;
+            margin: 6% 0 0 0;
+            font-family: 'simpler-bold', sans-serif;
+            font-weight: 100;
+
+            @include respond(mini-desktop) {
+                width: 100%;
+                margin: 1rem auto 0;
+                line-height: 3rem;
+                font-size: 2.5rem;
+            }
+
+            .sivsub {
+                display: block;
+            }
+        }
+
+        .flex {
+
+            &-icons {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 75%;
+                margin: 2.3rem auto 0 auto;
+                border: 0px solid green;
+
+                @include respond(mini-desktop) {
+                    width: 95%;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin: 0 auto 0 auto;
+                }
+
+                & div {
+                    width: 50%;
+
+                    @include respond(mini-desktop) {
+                        margin-top: 2rem;
+                        line-height: 3.5rem;
+                    }
+                }
+
+                img {
+                    width: 7.5rem;
+
+                    @include respond(mini-desktop) {
+                        width: 6.7rem;
+                    }
+                }
+
+                span {
+                    font-family: 'simpler', sans-serif;
+                    display: block;
+                    margin: 0 0 0 0;
+                    font-size: 1.1rem;
+                    line-height: 110%;
+                    border: 0px solid green;
+
+                    @include respond(mini-desktop) {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 62%;
+        margin: 8% auto 0 auto;
+
+        @include respond(mini-desktop) {
+            margin: 5rem auto 0 auto;
+            width: 75%;
+        }
+    }
+
+    &-right {
+        display: flex;
+        border-left: 3px solid #000000;
+        width: 50%;
+        font-family: 'simpler-bolder', sans-serif;
+        align-items: center;
+
+        @include respond(mini-desktop) {
+            align-items: end;
+
+        }
+
+        .from {
+            font-size: 1rem;
+            line-height: 100%;
+
+            @include respond(mini-desktop) {
+                font-size: 1.8rem;
+                line-height: 100%;
+
+            }
+        }
+
+        .prc {
+            font-size: 3.2rem;
+            line-height: 100%;
+
+            @include respond(mini-desktop) {
+                font-size: 5rem;
+            }
+        }
+
+        .R_side {
+            display: flex;
+            align-items: baseline;
+            line-height: 100%;
+            font-size: 1rem;
+
+            @include respond(mini-desktop) {
+                flex-direction: column;
+            }
+        }
+
+        .L_side {
+            display: flex;
+            flex-direction: column;
+            line-height: 100%;
+            font-size: 1rem;
+            text-align: right;
+            padding-block-start: 0.5rem;
+            padding-inline-start: 0.15rem;
+
+            @include respond(mini-desktop) {
+                font-size: 1.3rem;
+                padding-block-end: 0.8rem;
+
+            }
+        }
+    }
+
+    &-left {
+        text-align: right;
+        padding: 0 5% 0 0;
+        line-height: 100%;
+        box-sizing: border-box;
+        font-size: 1.5rem;
+        width: 50%;
+
+        @include respond(mini-desktop) {
+            padding: 0 3% 0 0;
+            line-height: 140%;
+            box-sizing: border-box;
+            font-size: 1.9rem;
+        }
+    }
+}
