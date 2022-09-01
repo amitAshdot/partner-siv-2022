@@ -252,7 +252,7 @@
             color: $error-border;
             width: 23rem;
             right: 14rem;
-            top: -0.5rem;
+            top: 0rem;
 
             @include respond(tab-port) {
                 width: 90%;

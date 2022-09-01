@@ -124,9 +124,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     const validateForm = () => {
-        let flag = false, lastName = document.getElementById("lastname"),
-            phone = document.getElementById("mobilephone"),
+        let flag = false, lastName = document.getElementById("lastname"), input_10 = document.getElementById("input_10")
+        phone = document.getElementById("mobilephone"),
             email = document.getElementById("email"), message = document.getElementById("message");
+        debugger
+        if (input_10.value === "") {
+            input_10.classList.add("error");
+            flag = true;
+        }
         if (lastName.value.length < 2) {
             lastName.classList.add("error");
             flag = true;
