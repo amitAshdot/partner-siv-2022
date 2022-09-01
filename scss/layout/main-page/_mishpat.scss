@@ -46,12 +46,14 @@
      position: absolute;
      top: -0.05em;
      right: 0;
-     font-size: 1.1em;
+     font-size: 1.2rem;
+     //  font-size: 16px;
      border: 0px solid green;
 
      @include respond(mini-desktop) {
          top: 0;
-         font-size: 1.5em;
+         font-size: 2rem;
+         //  font-size: 16px;
          line-height: 100%;
          overflow: hidden;
      }
