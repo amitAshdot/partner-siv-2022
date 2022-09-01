@@ -57,11 +57,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     $(window).scroll(function () {
         var scrollTop = $(window).scrollTop();
         if (scrollTop > 500 && $(window).width() < 1080) {
-            $("#stripFom").fadeIn("slow");
+            $("#stripForm-container").fadeIn("slow");
             clearTimeout($.data(this, "scrollTimer"));
         } else {
             clearTimeout($.data(this, "scrollTimer"));
-            $("#stripFom").fadeOut("slow");
+            $("#stripForm-container").fadeOut("slow");
         }
     });
     // SHOW CTA BUTTON ON MOBILE END
