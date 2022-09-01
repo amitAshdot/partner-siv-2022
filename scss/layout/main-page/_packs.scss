@@ -320,12 +320,12 @@ input:checked+.slider:before {
         h3.speedtxt {
             font-size: 1.4rem;
             line-height: 100%;
-            font-family: simpler-bold;
+            font-family: 'simpler-bold', sans-serif;
 
             @include respond(mini-desktop) {
                 font-size: 2.5rem;
                 line-height: 100%;
-                font-family: simpler-bolder;
+                font-family: 'simpler-bolder', sans-serif;
                 margin-block-start: 2rem;
             }
         }
@@ -339,7 +339,7 @@ input:checked+.slider:before {
 
             @include respond(mini-desktop) {
                 font-size: 5.5rem;
-                font-family: simpler;
+                font-family: 'simpler', sans-serif;
             }
 
             span {
@@ -369,13 +369,13 @@ input:checked+.slider:before {
         &>p {
             line-height: 100%;
             font-size: 1.5rem;
-            font-family: simpler-bold;
+            font-family: 'simpler-bold', sans-serif;
             text-align: center;
             text-align: -webkit-center;
 
             @include respond(mini-desktop) {
                 font-size: 3rem;
-                font-family: simpler;
+                font-family: 'simpler', sans-serif;
             }
         }
 

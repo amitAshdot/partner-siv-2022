@@ -62,9 +62,9 @@
 }
 
 .u-mobile {
-  display: none;
+  display: none !important;
 
   @include respond(mini-desktop) {
-    display: block;
+    display: block !important;
   }
 }
