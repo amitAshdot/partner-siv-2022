@@ -45,7 +45,8 @@
             }
         }
 
-        & input {
+        & input,
+        & #input_10 {
             font-family: 'simpler', sans-serif;
             color: #ffffff;
             width: 100%;
@@ -58,14 +59,18 @@
             margin-block-end: 1rem;
             border-bottom: 1px solid #ffffff;
 
-
+            @include respond(mini-desktop) {
+                font-size: 2.5rem;
+            }
 
             &::placeholder {
                 color: #ffffff;
             }
 
-            @include respond(mini-desktop) {
-                font-size: 2.5rem;
+
+
+            &.error {
+                border-bottom: 2px solid $error-border;
             }
         }
 
@@ -183,6 +188,82 @@
                 }
             }
 
+        }
+    }
+
+
+    .divhidden {
+        background: #2cd5c4;
+        width: 80%;
+        // border: 1px black solid;
+        position: absolute;
+        padding: calc(5.5% - 4px) 0;
+        left: 50%;
+        bottom: 2rem;
+        top: 8rem;
+        transform: translateX(-50%);
+        z-index: 99999;
+        color: #000;
+        font-size: 24px !important;
+        margin-top: 0;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 4px solid #ffffff;
+        border-radius: 10px;
+
+        @include respond(mini-desktop) {
+            width: 90%;
+            top: 19rem;
+        }
+    }
+
+    &-message {
+        position: absolute;
+        right: 0;
+
+        opacity: 0;
+        width: 100%;
+        margin-block-start: 1rem;
+        margin-block-end: 1rem;
+        text-align: center;
+
+        transition: all 0.3s;
+
+        @include respond(tab-port) {
+            font-size: 3.9rem;
+            width: 100%;
+            margin-block-start: 2rem;
+            margin-block-end: 2rem;
+        }
+
+        &.error {
+            opacity: 1;
+            border: 2px solid $error-border;
+            // background: $error-bg;
+            background: $color-white;
+            text-align: center;
+            border-radius: 20px;
+            padding: 1rem;
+            margin-top: 1rem;
+            line-height: initial;
+            font-size: 1.5rem;
+            color: $error-border;
+            width: 23rem;
+            right: 14rem;
+            top: -0.5rem;
+
+            @include respond(tab-port) {
+                width: 90%;
+                right: 5%;
+                font-size: 2.5rem;
+                padding-block: 4rem;
+            }
+        }
+
+        &:empty {
+            display: none;
         }
     }
 }

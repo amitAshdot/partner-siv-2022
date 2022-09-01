@@ -134,9 +134,24 @@
             <!-- nested -->
 
             <h2 class="checkBuild">הצטרפו לאינטרנט המהיר של פרטנר</h2>
-            <input name="lastname" id="lastname" type="text" placeholder="שם מלא" class="form-input" required="">
-            <input name="mobilephone" id="mobilephone" type="tel" pattern="[0-9-]{8,10}" placeholder="טלפון"
-                class="form-input" required="">
+            <p id="message" class="form-message error"></p>
+
+            <select name="input_10" id="input_10">
+                <option value="" selected="selected" class="gf_placeholder">בחר ספק נוכחי</option>
+                <option value="current"> פרטנר</option>
+                <option value="יס">YES</option>
+                <option value="סלקום">סלקום</option>
+                <option value="הוט">הוט</option>
+                <option value="ללא"> אחר / ללא</option>
+            </select>
+            <div class="divhidden">
+                <div style="padding:10px;text-align: center;">
+                    <a style="color: black;text-decoration: none;font-size: 28px;line-height: 31px;"
+                        href="https://www.partner.co.il/n/tv/home"> <b>לקוחות קיימים בפרטנר – למידע לחצו כאן </b></a>
+                </div>
+            </div>
+            <input name="lastname" id="lastname" type="text" placeholder="שם מלא" class="form-input">
+            <input name="mobilephone" id="mobilephone" type="tel" placeholder="טלפון" class="form-input">
             <input name="email" id="email" type="email" placeholder="דואל" class="form-input">
 
             <div class="form__bottom">

@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const isMobile = (width, mobileWidth) => { return width <= mobileWidth }
 
-    // FLOATING PHONE BUTTON AND ONANDOFF
+    //----- FLOATING PHONE BUTTON AND ONANDOFF -----
     timerPlus("5e2713a553994f0017c86f01");
 
     const d = new Date();
@@ -49,11 +49,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
             break;
     }
-    // FLOATING PHONE BUTTON AND ONANDOFF END
+    //----- FLOATING PHONE BUTTON AND ONANDOFF END -----
 
 
 
-    // SHOW CTA BUTTON ON MOBILE
+    //------ SHOW CTA BUTTON ON MOBILE ------
     $(window).scroll(function () {
         var scrollTop = $(window).scrollTop();
         if (scrollTop > 500 && $(window).width() < 1080) {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             $("#stripForm-container").fadeOut("slow");
         }
     });
-    // SHOW CTA BUTTON ON MOBILE END
+    //------ SHOW CTA BUTTON ON MOBILE END -----
 
     window.smoothScroll = function (target) {
         var scrollContainer = target;
@@ -88,6 +88,101 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // start scrolling
         scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
     }
+
+
+    // -----START isCustomerExist-----
+    $('.divhidden').hide();
+    $('#input_10').change(function () {
+        if ($(this).val() == 'current') {
+            $('.divhidden').show();
+        } else {
+            $('.divhidden').hide();
+        }
+    });
+    // -----END isCustomerExist-----
+
+    // -----START EMAIL VALIDATION-----
+    const isNumberKey = (evt) => {
+        let charCode = (evt.which) ? evt.which : evt.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+        return true;
+    }
+    let phoneNumberInput = document.getElementById("mobilephone");
+    phoneNumberInput.onkeypress = isNumberKey
+
+    const validateEmail = (email) => {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    const validatePhone = (phone) => {
+        // const re = /^[0-9]{10}$/;
+        const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
+
+        return re.test(String(phone));
+    }
+
+    const validateForm = () => {
+        let flag = false, lastName = document.getElementById("lastname"),
+            phone = document.getElementById("mobilephone"),
+            email = document.getElementById("email"), message = document.getElementById("message");
+        if (lastName.value.length < 2) {
+            lastName.classList.add("error");
+            flag = true;
+        }
+        if (validateEmail(email.value) === false) {
+            email.classList.add("error");
+            flag = true;
+        }
+        if (validatePhone(phone.value) === false) {
+            phone.classList.add("error");
+            flag = true;
+        }
+        if (flag) {
+            message.innerHTML = "אנא מלא/י את כל השדות";
+            message.classList.add("error");
+        }
+        return flag ? false : true;
+    }
+    const submitForm = (e) => {
+        e.preventDefault();
+        if (validateForm()) {
+            var data = $(this).serialize();
+            if (validateForm()) {
+
+                // $("#myForm").submit(function (e) {
+                e.preventDefault();
+                // var data = $(this).serialize();
+                debugger
+                console.log(data)
+                // $.ajax({
+                //     type: "GET",
+                //     url:
+                //         "https://syatacrm.co.il/API9/mgrqispi94.dll?appname=Syata&prgname=Get_Leads_receiving_web&WD=Sderot&projectId=SD&key=googleTV2lead",
+                //     data: data
+                // });
+                // });
+
+                $.ajax({
+                    type: "POST",
+                    url: './mail.php',
+                    data: data,
+                    success: function (mail) {
+                        alert('הפרטים נשלחו בהצלחה');
+                        // window.location.href = 'thankyou.html';
+                    }
+                });
+            }
+
+            return true
+        } else {
+            return false
+        }
+    }
+
+    document.getElementById("top").addEventListener("submit", submitForm);
+    // -----END EMAIL VALIDATION-----
 });
 
 // tabbed
