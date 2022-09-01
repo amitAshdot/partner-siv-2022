@@ -14,7 +14,7 @@
   background-color: $color-grey-light-1;
   padding: 16rem 3rem;
 
-  @include respond(tab-port) {
+  @include respond(mini-desktop) {
     flex-direction: column;
     padding: 5rem 3rem;
   }
@@ -27,7 +27,7 @@
     max-width: 50%;
     margin-left: 1rem;
 
-    @include respond(tab-port) {
+    @include respond(mini-desktop) {
       align-items: center;
       max-width: 100%;
       margin-left: 0rem;
@@ -39,7 +39,7 @@
       justify-content: flex-end;
       margin-bottom: 4rem;
 
-      @include respond(tab-port) {
+      @include respond(mini-desktop) {
         justify-content: center;
         width: 50%;
         margin-bottom: 0;
@@ -61,7 +61,7 @@
           margin-left: 1rem;
         }
 
-        @include respond(tab-port) {
+        @include respond(mini-desktop) {
           width: 15%;
           margin-left: 1rem;
         }
@@ -86,7 +86,7 @@
         line-height: 4.3vw;
         overflow: hidden;
 
-        @include respond(tab-port) {
+        @include respond(mini-desktop) {
           font-size: 4rem;
           line-height: 5rem;
         }
@@ -112,7 +112,7 @@
         text-align: center;
         overflow: hidden;
 
-        @include respond(tab-port) {
+        @include respond(mini-desktop) {
           font-size: 4rem;
           line-height: 5rem;
           margin: 2rem 0 3rem;
@@ -132,7 +132,7 @@
     align-items: flex-end;
     font-family: "simpler-bold", sans-serif;
 
-    @include respond(tab-port) {
+    @include respond(mini-desktop) {
       align-self: center;
     }
 
@@ -141,7 +141,7 @@
       line-height: 4.3vw;
       overflow: hidden;
 
-      @include respond(tab-port) {
+      @include respond(mini-desktop) {
         font-size: 4rem;
         line-height: 5rem;
       }
@@ -167,7 +167,7 @@
 
   @include respond(mini-desktop) {}
 
-  @include respond(tab-port) {}
+  @include respond(mini-desktop) {}
 
   @include respond(phone) {
     padding: 5rem 1rem;
@@ -185,7 +185,7 @@
 
     @include respond(mini-desktop) {}
 
-    @include respond(tab-port) {}
+    @include respond(mini-desktop) {}
 
     @include respond(phone) {
       font-size: 3.5rem;
@@ -268,7 +268,7 @@
 
     @include respond(mini-desktop) {}
 
-    @include respond(tab-port) {
+    @include respond(mini-desktop) {
       width: 50vw;
     }
 

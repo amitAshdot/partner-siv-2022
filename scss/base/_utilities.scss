@@ -9,7 +9,7 @@
 .u-margin-botton-medium {
   margin-bottom: 4rem !important;
 
-  @include respond(tab-port) {
+  @include respond(mini-desktop) {
     margin-bottom: 1.5rem !important;
   }
 }
@@ -17,7 +17,7 @@
 .u-margin-botton-big {
   margin-bottom: 8rem !important;
 
-  @include respond(tab-port) {
+  @include respond(mini-desktop) {
     margin-bottom: 5rem !important;
   }
 }
@@ -25,7 +25,7 @@
 .u-margin-top-medium {
   margin-bottom: 6rem !important;
 
-  @include respond(tab-port) {
+  @include respond(mini-desktop) {
     margin-bottom: 3rem !important;
   }
 }
@@ -33,7 +33,7 @@
 .u-margin-top-big {
   margin-bottom: 8rem !important;
 
-  @include respond(tab-port) {
+  @include respond(mini-desktop) {
     margin-bottom: 4rem !important;
   }
 }
@@ -41,7 +41,7 @@
 .u-margin-top-huge {
   margin-bottom: 8rem !important;
 
-  @include respond(tab-port) {
+  @include respond(mini-desktop) {
     margin-bottom: 4rem !important;
   }
 }

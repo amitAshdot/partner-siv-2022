@@ -84,6 +84,14 @@
         right: 0;
         width: 26.5%;
         height: auto;
+
+        @include respond(mini-desktop) {
+            position: absolute;
+            width: 18rem;
+            height: auto;
+            bottom: 0;
+            z-index: 1;
+        }
     }
 
     &-siv_formMob {
@@ -98,15 +106,13 @@
 
     }
 
-    &-staticMob {
-        position: absolute;
-        width: 18rem;
-        height: auto;
-        bottom: 0;
-        z-index: 1;
-    }
-
-
+    // &-staticMob {
+    //     position: absolute;
+    //     width: 18rem;
+    //     height: auto;
+    //     bottom: 0;
+    //     z-index: 1;
+    // }
 }
 
 .head__text {

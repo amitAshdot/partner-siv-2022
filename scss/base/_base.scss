@@ -51,7 +51,7 @@ body {
   margin-inline: auto;
   background-color: $color-grey;
 
-  @include respond(tab-port) {
+  @include respond(mini-desktop) {
     // padding: 0;
   }
 }
