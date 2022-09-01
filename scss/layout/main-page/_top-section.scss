@@ -305,3 +305,61 @@
         }
     }
 }
+
+
+
+
+.callPhone {
+    position: relative;
+    display: flex;
+    height: 100%;
+    place-items: center;
+    text-decoration: none;
+
+    &-fixed {
+        display: block;
+        font-size: 1vw;
+        position: fixed;
+        top: 85%;
+        left: 10px;
+        width: 30%;
+        max-width: 8rem;
+        height: 17vw;
+        max-height: 65px;
+        border: 0px;
+        background: #333;
+        border-radius: 15px;
+        z-index: 999999;
+    }
+
+    &-icon {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        border-radius: 100%;
+        background: #2fd4c3;
+        width: 3rem;
+        height: 3rem;
+        transform: translate(40%, -50%);
+        filter: drop-shadow(-5px 0px 0px white);
+    }
+
+    &-img {
+        position: absolute;
+        right: 11%;
+        top: 50%;
+        transform: translateY(-50%) rotate(255deg);
+        filter: invert(1);
+        width: 70%;
+    }
+
+    &>p {
+        width: 60%;
+        margin-right: auto;
+        font-size: 6em;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+}
