@@ -46,7 +46,7 @@
             @include respond(mini-desktop) {
                 height: 38rem;
                 left: 2rem;
-                top: 195rem;
+                top: 190rem;
             }
         }
     }
@@ -125,10 +125,11 @@
         font-size: 1.4rem;
         line-height: 1.4rem;
         font-family: 'simpler', sans-serif;
+        font-weight: 100;
 
         @include respond(mini-desktop) {
             text-align: center;
-            font-size: 3rem;
+            font-size: 2.8rem;
             line-height: 3rem;
         }
     }

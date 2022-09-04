@@ -1,19 +1,29 @@
 <?
 //   $recepient = "eyalivne@gmail.com, micha@targetcall.co.il,shiran@targetcall.co.il";
  $recepient = "amitashdot@gmail.com";
-$text_1 = trim($_POST["lastname"]);
-$input_10 = trim($_POST["input_10"]);
-$text_2 = trim($_POST["mobilephone"]);
+ 
+$text_1 = trim($_POST["firstName"]);
+$text_2 = trim($_POST["Phone_1"]);
 $text_3 = trim($_POST["email"]);
-$keyword = trim($_POST["keyword1"]);
-$dynamic3 = trim($_POST["dynamic_3"]);
+$input_10 = trim($_POST["input_10"]);
+$campaign = trim($_POST["campaign"]);
 
-$message = " \n מברוק! קיבלתם ליד חדש\n\n<br>
-שם: $text_1 \n  </br>
-טלפון: $text_2\n </br>
-email: $text_3\n </br>
-ספק נוכחי : $input_10\n </br>
-מילת חיפוש : $dynamic3\n<br>
+$keyword = trim($_POST["keyword1"]);
+$dynamic3 = trim($_POST["term"]);
+
+$message = " \n מברוק! קיבלתם ליד חדש \r\n<br>
+שם: $text_1 \r\n  </br>
+
+טלפון: $text_2 \r\n </br>
+
+email: $text_3 \r\n </br>
+
+ספק נוכחי : $input_10 \r\n </br>
+
+קמפיין: $campaign \r\n<br>
+
+מילת חיפוש : $dynamic3 \r\n<br>
+
 בהצלחה!
 ";
 $pagetitle = "ליד חדש - partnertv-sales.co.il";

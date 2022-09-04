@@ -1,3 +1,15 @@
+.show-on-scroll {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: all 0.5s;
+  will-change: transform opacity;
+}
+
+.is-visible {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
 .u-center-text {
   text-align: center !important;
 }
@@ -62,9 +74,9 @@
 }
 
 .u-mobile {
-  display: none !important;
+  display: none;
 
   @include respond(mini-desktop) {
-    display: block !important;
+    display: block;
   }
 }

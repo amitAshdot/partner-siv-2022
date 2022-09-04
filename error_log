@@ -1,0 +1,9 @@
+[01-Sep-2022 16:41:34 Asia/Jerusalem] PHP Notice:  Undefined index: lastname in /home/targetca/partner-il.co.il/fiber/mail.php on line 4
+[01-Sep-2022 16:41:34 Asia/Jerusalem] PHP Notice:  Undefined index: mobilephone in /home/targetca/partner-il.co.il/fiber/mail.php on line 6
+[01-Sep-2022 16:41:34 Asia/Jerusalem] PHP Notice:  Undefined index: keyword1 in /home/targetca/partner-il.co.il/fiber/mail.php on line 8
+[01-Sep-2022 16:41:34 Asia/Jerusalem] PHP Notice:  Undefined index: dynamic_3 in /home/targetca/partner-il.co.il/fiber/mail.php on line 9
+[01-Sep-2022 16:45:35 Asia/Jerusalem] PHP Notice:  Undefined index: keyword1 in /home/targetca/partner-il.co.il/fiber/mail.php on line 11
+[01-Sep-2022 16:47:32 Asia/Jerusalem] PHP Notice:  Undefined index: keyword1 in /home/targetca/partner-il.co.il/fiber/mail.php on line 11
+[01-Sep-2022 16:50:49 Asia/Jerusalem] PHP Notice:  Undefined index: keyword1 in /home/targetca/partner-il.co.il/fiber/mail.php on line 11
+[01-Sep-2022 16:52:18 Asia/Jerusalem] PHP Notice:  Undefined index: keyword1 in /home/targetca/partner-il.co.il/fiber/mail.php on line 11
+[01-Sep-2022 17:15:07 Asia/Jerusalem] PHP Notice:  Undefined index: keyword1 in /home/targetca/partner-il.co.il/fiber/mail.php on line 11
