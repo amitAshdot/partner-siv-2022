@@ -1,6 +1,6 @@
 <?
-//   $recepient = "eyalivne@gmail.com, micha@targetcall.co.il,shiran@targetcall.co.il";
- $recepient = "amitashdot@gmail.com";
+  $recepient = "eyalivne@gmail.com, micha@targetcall.co.il,shiran@targetcall.co.il";
+//  $recepient = "amitashdot@gmail.com";
  
 $text_1 = trim($_POST["firstName"]);
 $text_2 = trim($_POST["Phone_1"]);

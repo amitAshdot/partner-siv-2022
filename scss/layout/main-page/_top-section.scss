@@ -29,31 +29,31 @@
         }
     }
 
-    &-bgMainWeb {
-        position: relative;
-        width: 100%;
-        height: auto;
-        z-index: -1;
-    }
+    // &-bgMainWeb {
+    //     position: relative;
+    //     width: 100%;
+    //     height: auto;
+    //     z-index: -1;
+    // }
 
-    &-bgMainMob {
-        width: 100%;
-        height: auto;
-    }
+    // &-bgMainMob {
+    //     width: 100%;
+    //     height: auto;
+    // }
 
-    &-logo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 12.7rem;
-        height: auto;
+    // &-logo {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 12.7rem;
+    //     height: auto;
 
-        @include respond(mini-desktop) {
-            width: 15.65rem;
-        }
-    }
-
-    &-bgMainMob {}
+    //     @include respond(mini-desktop) {
+    //         width: 15.65rem;
+    //     }
+    // }
+    // 
+    // &-bgMainMob {}
 
     &-blueLineRight {
         right: 0rem;
@@ -132,12 +132,12 @@
             width: 29rem;
         }
 
-        .tellme {
-            display: block;
-            line-height: 100%;
-            font-size: 2.5rem;
+        // .tellme {
+        //     display: block;
+        //     line-height: 100%;
+        //     font-size: 2.5rem;
 
-        }
+        // }
 
         .private {
             display: block;
@@ -200,6 +200,7 @@
 
                 img {
                     width: 7.5rem;
+                    height: auto;
 
                     @include respond(mini-desktop) {
                         width: 6.7rem;
@@ -222,78 +223,78 @@
         }
     }
 
-    &-info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 62%;
-        margin: 8% auto 0 auto;
+    // &-info {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     width: 62%;
+    //     margin: 8% auto 0 auto;
 
-        @include respond(mini-desktop) {
-            margin: 5rem auto 0 auto;
-            width: 75%;
-        }
-    }
+    //     @include respond(mini-desktop) {
+    //         margin: 5rem auto 0 auto;
+    //         width: 75%;
+    //     }
+    // }
 
-    &-right {
-        display: flex;
-        border-left: 3px solid #000000;
-        width: 50%;
-        font-family: 'simpler-bolder', sans-serif;
-        align-items: center;
+    // &-right {
+    //     display: flex;
+    //     border-left: 3px solid #000000;
+    //     width: 50%;
+    //     font-family: 'simpler-bolder', sans-serif;
+    //     align-items: center;
 
-        @include respond(mini-desktop) {
-            align-items: end;
+    //     @include respond(mini-desktop) {
+    //         align-items: end;
 
-        }
+    //     }
 
-        .from {
-            font-size: 1rem;
-            line-height: 100%;
+    //     .from {
+    //         font-size: 1rem;
+    //         line-height: 100%;
 
-            @include respond(mini-desktop) {
-                font-size: 1.8rem;
-                line-height: 100%;
+    //         @include respond(mini-desktop) {
+    //             font-size: 1.8rem;
+    //             line-height: 100%;
 
-            }
-        }
+    //         }
+    //     }
 
-        .prc {
-            font-size: 3.2rem;
-            line-height: 100%;
+    //     .prc {
+    //         font-size: 3.2rem;
+    //         line-height: 100%;
 
-            @include respond(mini-desktop) {
-                font-size: 5rem;
-            }
-        }
+    //         @include respond(mini-desktop) {
+    //             font-size: 5rem;
+    //         }
+    //     }
 
-        .R_side {
-            display: flex;
-            align-items: baseline;
-            line-height: 100%;
-            font-size: 1rem;
+    //     .R_side {
+    //         display: flex;
+    //         align-items: baseline;
+    //         line-height: 100%;
+    //         font-size: 1rem;
 
-            @include respond(mini-desktop) {
-                flex-direction: column;
-            }
-        }
+    //         @include respond(mini-desktop) {
+    //             flex-direction: column;
+    //         }
+    //     }
 
-        .L_side {
-            display: flex;
-            flex-direction: column;
-            line-height: 100%;
-            font-size: 1rem;
-            text-align: right;
-            padding-block-start: 0.5rem;
-            padding-inline-start: 0.15rem;
+    //     .L_side {
+    //         display: flex;
+    //         flex-direction: column;
+    //         line-height: 100%;
+    //         font-size: 1rem;
+    //         text-align: right;
+    //         padding-block-start: 0.5rem;
+    //         padding-inline-start: 0.15rem;
 
-            @include respond(mini-desktop) {
-                font-size: 1.3rem;
-                padding-block-end: 0.8rem;
+    //         @include respond(mini-desktop) {
+    //             font-size: 1.3rem;
+    //             padding-block-end: 0.8rem;
 
-            }
-        }
-    }
+    //         }
+    //     }
+    // }
 
     &-left {
         text-align: right;

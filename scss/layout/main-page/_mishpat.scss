@@ -81,28 +81,28 @@
      }
  }
 
- .mishpatiWrap .conditions ul.mishpatiot li a {
-     color: #2cd5c4;
-     text-decoration: none;
-     transition: 0.3s all;
- }
+ //  .mishpatiWrap .conditions ul.mishpatiot li a {
+ //      color: #2cd5c4;
+ //      text-decoration: none;
+ //      transition: 0.3s all;
+ //  }
 
- .mishpatiWrap .conditions ul.mishpatiot li a:hover {
-     color: #000000;
- }
+ //  .mishpatiWrap .conditions ul.mishpatiot li a:hover {
+ //      color: #000000;
+ //  }
 
- .mishpatiWrap .siv_downL {
-     display: none;
+ //  .mishpatiWrap .siv_downL {
+ //      display: none;
 
-     @include respond(mini-desktop) {
-         display: block;
-         position: absolute;
-         left: 0;
-         bottom: 17%;
-         width: 6.1rem;
-     }
- }
+ //      @include respond(mini-desktop) {
+ //          display: block;
+ //          position: absolute;
+ //          left: 0;
+ //          bottom: 17%;
+ //          width: 6.1rem;
+ //      }
+ //  }
 
- .mylink {
-     display: none;
- }
+ //  .mylink {
+ //      display: none;
+ //  }

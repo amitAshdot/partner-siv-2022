@@ -102,13 +102,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     //------ SHOW CTA BUTTON ON MOBILE ------
     $(window).scroll(function () {
         var scrollTop = $(window).scrollTop();
-        // if (scrollTop > 500 && $(window).width() < 1080) {
-        if (scrollTop > 500) {
-            $("#stripForm-container").fadeIn();
-            clearTimeout($.data(this, "scrollTimer"));
-        } else {
-            clearTimeout($.data(this, "scrollTimer"));
-            $("#stripForm-container").fadeOut();
+        if ($(window).width() < 1080) {
+            if (scrollTop > 500) {
+                $("#stripForm-container").fadeIn();
+                clearTimeout($.data(this, "scrollTimer"));
+            } else {
+                clearTimeout($.data(this, "scrollTimer"));
+                $("#stripForm-container").fadeOut();
+            }
         }
     });
     //------ SHOW CTA BUTTON ON MOBILE END -----
@@ -179,13 +180,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
             var form = document.querySelector('#top');
             var data = serialize(form);
             e.preventDefault();
-            // var data = $(this).serialize();
-            // $.ajax({
-            //     type: "GET",
-            //     url: 'https://syatacrm.co.il/API9/mgrqispi94.dll?appname=Syata&prgname=Get_Leads_receiving_web&WD=Sderot&projectId=SD&key=googleisp1lead',
-            //     data: data,
-            // });
-
+            var data = $(this).serialize();
+            $.ajax({
+                type: "GET",
+                url: 'https://syatacrm.co.il/API9/mgrqispi94.dll?appname=Syata&prgname=Get_Leads_receiving_web&WD=Sderot&projectId=SD&key=googleisp1lead',
+                data: data,
+            });
 
             $.ajax({
                 type: "POST",
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 data: data,
                 success: function (mail) {
                     alert('הפרטים נשלחו בהצלחה');
-                    // window.location.href = 'thankyou.html';
+                    window.location.href = 'thankyou.html';
                 }
             });
             return true
@@ -219,28 +219,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     // Give the URL parameters variable names
-    // var source = getParameterByName('utm_source');
-    // var medium = getParameterByName('utm_medium');
     var campaign = getParameterByName('utm_campaign');
     var term = getParameterByName('utm_term');
     var campaignID = getParameterByName('campaignID');
 
     // Put the variable names into the hidden fields in the form.
-    // document.getElementsByName("utm_source").value = source;
-    // document.getElementsByName("utm_medium").value = medium;
     document.getElementById("utm_campaign").value = campaign;
     document.getElementById("utm_term").value = term;
     document.getElementById("campaignID").value = campaignID;
     // ----- GET URL PARAMS END -----
-
-
-    // // ----- _ouibounce -----
-    // var _ouibounce = ouibounce(document.getElementById('ouibounce-modal'), {
-    //     aggressive: true, //Making this true makes ouibounce not to obey "once per visitor" rule
-    // });
-    //     // ----- _ouibounce END -----
-
-
 
     /*!
     * Serialize all form data into a query string

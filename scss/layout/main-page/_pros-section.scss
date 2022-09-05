@@ -116,67 +116,67 @@
     &-floatImg {
         position: absolute;
 
-        &-top {
-            top: 4.1rem;
-            right: 0;
-            width: 42rem;
-            height: auto;
+        // &-top {
+        //     top: 4.1rem;
+        //     right: 0;
+        //     width: 42rem;
+        //     height: auto;
 
-            z-index: -1;
+        //     z-index: -1;
 
-            @include respond(mini-desktop) {
-                top: 6rem;
-                right: -34px;
-                height: 60rem;
-                width: 38rem;
-                z-index: -1;
-            }
-        }
+        //     @include respond(mini-desktop) {
+        //         top: 6rem;
+        //         right: -34px;
+        //         height: 60rem;
+        //         width: 38rem;
+        //         z-index: -1;
+        //     }
+        // }
 
-        &-staticSofa {
-            bottom: -6.5rem;
-            right: 50%;
-            width: 44rem;
-            height: auto;
+        // &-staticSofa {
+        //     bottom: -6.5rem;
+        //     right: 50%;
+        //     width: 44rem;
+        //     height: auto;
 
-            z-index: 1;
-            transform: translateX(50%);
-        }
+        //     z-index: 1;
+        //     transform: translateX(50%);
+        // }
 
-        &-bottom {
+        // &-bottom {
 
-            &-R {
-                bottom: 1rem;
-                right: 2rem;
-                width: 43rem;
-                height: auto;
+        //     &-R {
+        //         bottom: 1rem;
+        //         right: 2rem;
+        //         width: 43rem;
+        //         height: auto;
 
-                z-index: 1;
-            }
+        //         z-index: 1;
+        //     }
 
-            &-L {
-                height: auto;
+        //     &-L {
+        //         height: auto;
 
-                bottom: -6rem;
-                left: 0;
-                z-index: 1;
-            }
-        }
+        //         bottom: -6rem;
+        //         left: 0;
+        //         z-index: 1;
+        //     }
+        // }
 
-        &-wrapQues {
-            bottom: 1rem;
-            height: auto;
+        // &-wrapQues {
+        //     bottom: 1rem;
+        //     height: auto;
 
-            @include respond(mini-desktop) {
-                display: none;
-            }
-        }
+        //     @include respond(mini-desktop) {
+        //         display: none;
+        //     }
+        // }
 
-        &-sofa {
-            bottom: 0;
-            left: 1rem;
-            height: auto;
+        // &-sofa {
+        //     bottom: 0;
+        //     left: 1rem;
+        //     height: auto;
 
-        }
+        // }
     }
 }

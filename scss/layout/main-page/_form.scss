@@ -45,6 +45,46 @@
             }
         }
 
+        .cta {
+            font-family: 'simpler-bold', sans-serif;
+            font-size: 1.2rem;
+            line-height: 100%;
+            width: 100%;
+            margin-block-end: 1rem;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+
+            @include respond(mini-desktop) {
+                font-size: 2rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            a:link,
+            a:visited {
+                color: white;
+                text-decoration: none;
+                cursor: pointer;
+
+                @include respond(mini-desktop) {
+                    font-size: 2rem;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            a:hover,
+            a:active,
+            a:focus {
+                color: white;
+            }
+
+            .underline {
+                text-decoration-line: underline;
+            }
+        }
+
         & input,
         & #input_10 {
             font-family: 'simpler', sans-serif;
@@ -91,45 +131,12 @@
             display: flex;
             justify-content: space-between;
             margin-block-start: 0.5rem;
+            justify-content: center;
 
             @include respond(mini-desktop) {
                 flex-direction: column-reverse;
                 margin-block-start: 2.5rem;
 
-            }
-
-            .cta {
-                font-size: 1.2rem;
-                line-height: 100%;
-                font-family: 'simpler-bold', sans-serif;
-                width: 50%;
-                text-decoration: none;
-                color: white;
-
-                @include respond(mini-desktop) {
-                    font-size: 1.8rem;
-                    width: 100%;
-                    text-align: center;
-                }
-
-                a:link,
-                a:visited {
-                    color: white;
-                    text-decoration: none;
-                    cursor: pointer;
-
-                    @include respond(mini-desktop) {
-                        font-size: 1.8rem;
-                        width: 100%;
-                        text-align: center;
-                    }
-                }
-
-                a:hover,
-                a:active,
-                a:focus {
-                    color: white;
-                }
             }
 
             .form-submit {
@@ -218,7 +225,7 @@
         padding: calc(5.5% - 4px) 0;
         left: 50%;
         bottom: 2rem;
-        top: 8rem;
+        top: 11rem;
         transform: translateX(-50%);
         z-index: 99999;
         color: #000;
@@ -233,7 +240,7 @@
 
         @include respond(mini-desktop) {
             width: 90%;
-            top: 19rem;
+            top: 22rem;
         }
     }
 
@@ -288,13 +295,9 @@
 
 
 #stripForm {
-    &-container {
-        display: none;
-    }
-
-    border-top: 3px solid white;
-    // display: block;
-    position: fixed;
+    // border-top: 3px solid white;
+    display: block;
+    position: relative;
     bottom: 0;
     transform: translateX(50%);
     right: 50%;
@@ -311,14 +314,25 @@
 
     font-size: 1.8rem;
     font-family: 'simpler-bolder',
-    sans-serif;
-
+        sans-serif;
+    cursor: pointer;
 
     @include respond(mini-desktop) {
         width: 100%;
         padding: 2rem 0 2rem 0;
+        position: fixed;
+        border-top: 3px solid white;
     }
 
+    &-container {
+        display: block;
+        position: relative;
+        cursor: pointer;
+
+        @include respond(mini-desktop) {
+            display: none;
+        }
+    }
 }
 
 
